@@ -1,0 +1,23 @@
+.navbar{
+    width: 100%;
+}
+
+.form-inline{
+    display: flex;
+    
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card{
+    width: 70%;
+    background-color: #f2f2f2;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
