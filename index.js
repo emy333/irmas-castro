@@ -52,6 +52,40 @@ document.getElementById('root').innerHTML = categories.map((item) =>
     )
 }).join('')
 
+
+var link = document.getElementById("cartButton");
+var car = document.querySelector(".sidebar");
+
+link.addEventListener("click", function(event) {
+  // Impede o comportamento padrão de recarregar a página
+  event.preventDefault();
+
+  if (car.style.display === "block") {
+    car.style.display = "none"; // Oculta o modal se estiver visível
+  } else {
+    car.style.display = "block"; // Exibe o modal se estiver oculto
+  }
+  // Altera o estilo da div para torná-la visível
+    car.classList.remove("sidebar");
+    car.classList.add("minhaDivNova");
+});
+
+var iconeFechar = document.getElementById("close");
+iconeFechar.addEventListener("click", function() {
+  // Altera a visibilidade da div
+  car.style.display = "none";
+});
+
+car.addEventListener("click", function(event) {
+  if (event.target === car) {
+    car.style.display = "none"; // Oculta a div
+  }
+});
+
+
+
+    
+
 var cart = [];
 
 function addtocart(a){
