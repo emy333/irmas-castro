@@ -2,32 +2,32 @@ const product = [
     {
         id: 0,
         image: 'assets/img/01.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 120,
+        title: 'Detergente YPÊ',
+        price: 1.25,
     },
     {
         id: 1,
         image: 'assets/img/02.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 130,
+        title: 'Sabão líquido OMO',
+        price: 1.30,
     },
     {
         id: 2,
-        image: 'assets/img/01.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 60,
+        image: 'assets/img/03.PNG',
+        title: 'Sabão em pó OMO',
+        price: 6,
     },
     {
         id: 3,
-        image: 'assets/img/01.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 50,
+        image: 'assets/img/04.PNG',
+        title: 'Amaciante YPÊ',
+        price: 5,
     },
     {
         id: 4,
-        image: 'assets/img/01.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 10,
+        image: 'assets/img/05.PNG',
+        title: 'Desengordurante YPÊ',
+        price: 3.60,
     }
 ];
 
@@ -44,8 +44,8 @@ document.getElementById('root').innerHTML = categories.map((item) =>
             </div>
             <div class='botton'>
             <p>${title}</p>
-            <h2>R$ ${price}.00</h2>`+ 
-            "<button onclick='addtocart("+(i++)+")'>Adicionar ao carrinho</button>"+
+            <h2>R$ ${price}</h2>`+ 
+            "<button onclick='addtocart("+(i++)+")'>Adicionar ao Carrinho</button>"+
             `</div>
             </div>`
 
@@ -59,22 +59,35 @@ function addtocart(a){
     displaycart();
 }
 
+function delElement(a){
+    cart.splice(a, 1);
+    displaycart();
+
+}
+
 function displaycart(a){
-    let j = 0;
+    let j = 0, total=0;
+    document.getElementById("count").innerHTML=cart.length;
+
+
+
     if(cart.length==0){
-        document.getElementById('cartItem').innerHTML = "Your cart is empty";
+        document.getElementById('cartItem').innerHTML = "Seu carrinho está vazio";
+        document.getElementById("total").innerHTML = "R$ ";
     }
     else{
         document.getElementById("cartItem").innerHTML = cart.map((items)=> 
         {
             var {image, title, price} = items;
+            total = total+price;
+            document.getElementById("total").innerHTML = "R$ "+total.toFixed(2);
             return(
                 `<div class='cart-item'>
                 <div class='row-img'>
                     <img class='rowimg' src=${image}>
                 </div>
                 <p style='font-size:12px;'>${title}</p>
-                <h2 style='font-size:15px;'>$ ${price}.00</h2>`+
+                <h2 style='font-size:15px;'>R$ ${price}</h2>`+
                 "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
             );
         }).join('');
