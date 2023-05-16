@@ -41,6 +41,12 @@ body{
     border-radius: 3px;
     width: 80px ;
     height: 30px;
+}
+
+
+
+.cart .cartButton{
+    all: unset;
 
 }
 
@@ -60,6 +66,7 @@ body{
     margin: 5px;
     flex-grow: 0.8;
     flex-basis: 0;
+    font-size: 15px
 }
 
 .cart-item p, h2{
@@ -69,14 +76,14 @@ body{
 
 .container{
     display: flex;
-    width: 70%;
+    width: 100%;
     margin-bottom: 30px;
 }
 
 #root{
     width: 60%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
@@ -191,8 +198,6 @@ button{
 
 }
 
-
-
 button:hover{
     background-color: dodgerblue;
     color: #eee;
@@ -231,3 +236,62 @@ button:hover{
     color: #333;
 }
 
+.close{
+    display: none;
+}
+
+@media (max-width: 990px) {
+    .sidebar {
+      display: none !important;
+    }
+    #root {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .cart-item{
+        box-shadow: 0.5px 0.1px 3px 2px rgba(0.2, 0.2, 0.2, 0.2);
+    }
+    .close{
+        display: block;
+        top: 10px !important;
+        right: 10px !important;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+    .icon-close{
+        width: 50px;
+        height: 50px;
+    }
+
+    .head{
+        margin-top: 30px;
+    }
+    #root{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.minhaDivNova {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fcfcfc;
+    padding: 20px;
+    min-width: 90%;
+    height: 70%;
+    box-shadow: 2px 3px 3px 2px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+
+
+
+  }
