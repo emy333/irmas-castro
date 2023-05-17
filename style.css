@@ -25,11 +25,13 @@ body{
 }
 
 .header .logo{
+    width: 200px;
+    height: 50px;
     font-size: 20px;
     font-weight: bold;
     color: white;
     margin-bottom: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 
 .cart{
@@ -180,6 +182,16 @@ h2{
     color: orange;
     font-weight: bold;
 }
+
+.home {
+    text-decoration: none;
+    color: #eee;
+    font-size: 18px;
+  }
+
+  .right-align {
+    text-align: right;
+  }
 
 button{
     width: 100%;
