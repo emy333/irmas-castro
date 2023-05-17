@@ -38,7 +38,7 @@ const categories = [...new Set(product.map((item) =>
 function addtocart(index) {
     var quantityInput = document.getElementById('quantity' + index);
     var currentQuantity = parseInt(quantityInput.value);
-    quantityInput.value = currentQuantity + 1;
+        quantityInput.value = currentQuantity + 1;
     }
 document.getElementById('root').innerHTML = categories.map((item) => 
 {

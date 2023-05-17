@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap/_bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="landing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,30 +15,16 @@
     <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
     <title>Irmãs Castro</title>
 </head>
-<body>  
-    <div class="header">
-      <div><a href="ladingpage.html"><img class="logo" src="assets/img/logo01.png"></a></div>
-      <div class="cart">
-        <a href="/carrinho.html" class="cartButton" id="cartButton">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-        <p id="count">0</p>
-      </div>
-      
+<body>
+    <div class="landing">
+        <div class="container">
+            <nav class="navbar">
+                <a class="logo navbar-brand" href="index.html">Irmãs Castro</a>
+                <button class="btn" type="submit" onclick="window.location.href='index.html'">Comprar</button>
+            </nav>
+        </div>
     </div>
 
-    <div class="container">
-      <div id="root"></div>
-      <div class="sidebar">
-        <div class="close" id="close"><i class="icon-close fa-solid fa-xmark"></i></div>
-        <div class="head"><p>Meu Carrinho</p></div>
-        <div id="cartItem">Seu carrinho está vazio</div>
-        <div class="foot">
-          <h3>Total</h3>
-          <h2 id="total">R$ 0.00</h2>
-        </div>
-      </div>
-    </div>
 
 <script src="bootstrap/jQuery.js"></script>
 <script src="bootstrap/_bootstrap/js/bootstrap.min.js"></script>
