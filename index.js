@@ -34,6 +34,12 @@ const product = [
 const categories = [...new Set(product.map((item) =>
     {return item }))]
     let i=0;
+
+function addtocart(index) {
+    var quantityInput = document.getElementById('quantity' + index);
+    var currentQuantity = parseInt(quantityInput.value);
+    quantityInput.value = currentQuantity + 1;
+    }
 document.getElementById('root').innerHTML = categories.map((item) => 
 {
     var {image, title, price} = item;
@@ -45,12 +51,13 @@ document.getElementById('root').innerHTML = categories.map((item) =>
             <div class='botton'>
             <p>${title}</p>
             <h2>R$ ${price}</h2>`+ 
-            "<button onclick='addtocart("+(i++)+")'>Adicionar ao Carrinho</button>"+
+            "<button onclick='addtocart("+(i++)+")'><img class='add-car' src='assets/img/adicionar-ao-carrinho.png'></img> <input class='add-qnt' type='number' id='quantity' name='quantity' min='1' value='0'></button>"+
             `</div>
             </div>`
 
     )
 }).join('')
+
 
 
 var link = document.getElementById("cartButton");
