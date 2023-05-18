@@ -68,3 +68,37 @@
     color: #51A2ED;
     border-color: #51A2ED;
 }
+
+.frase{
+    max-width: 60%;
+    background-color: transparent;
+    margin-top: 70px;
+    margin-left: 50px;
+    color: #7db8a2;
+    font-family: 'Konkhmer Sleokchher', cursive;
+}
+
+
+.btn-localizacao{
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+    width: 160px;
+    height: 30px;
+    border-color: #51A2ED;
+    color: #51A2ED;
+    margin-left: 4.5%;
+}
+
+
+@media (max-width: 80%) {
+    .frase {
+        max-width: 50%;
+        background-color: transparent;
+    }
+
+}

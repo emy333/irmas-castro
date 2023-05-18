@@ -16,7 +16,7 @@ body{
 .header{
     height: 50px;
     width: 100%;
-    background-color: dodgerblue;
+    background-color: #51A2ED;
     margin: 0px 0px 30px;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ body{
 }
 
 .fa-solid{
-    color: dodgerblue;
+    color: #51A2ED;
 }
 
 .cart p{
@@ -65,7 +65,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 22px;
-    background-color: dodgerblue;
+    background-color: #51A2ED;
     color: white;
     margin: 5px;
     flex-grow: 0.8;
@@ -102,7 +102,7 @@ body{
 }
 
 .head{
-    background-color: #0396FF;
+    background-color: #51A2ED;
     border-radius: 3px;
     height: 40px;
     padding: 10px;
@@ -155,7 +155,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #0396FF ;
+    border: 1px solid #51A2ED ;
     border-radius: 5px;
     padding: 15px;
 }
@@ -246,7 +246,7 @@ button:hover{
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    border: 1px solid dodgerblue;
+    border: 1px solid #51A2ED;
     display: flex;
     align-items: center;
     justify-content: center;
