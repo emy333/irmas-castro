@@ -3,7 +3,10 @@
     width: 100%;
 }
 
+
 .container{
+    display: flex;
+    flex-direction: row;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,6 +19,26 @@
     border-radius: 20px;
 }
 
+.half-1 {
+    background-color: transparent;
+    max-width: 70%;
+    border: 1px solid black;
+    margin-top: -20%;
+}
+
+.half-2 {
+    background-color: transparent;
+    max-width: 30%;
+    flex: 1;
+    border: 1px solid black;
+}
+
+
+.btn-comprar{
+    margin-top: -500px !important;
+    margin-left: 60% !important;
+}
+
 .navbar-brand{
     background-color: #FFFFFF !important;
     margin-top: 10px;
@@ -23,7 +46,11 @@
 
 .navbar {
     background-color: #FFFFFF !important;
-    margin: 10px 10px 10px 10px;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .logo{
@@ -39,6 +66,7 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    padding-left: 3%;
 }
 
 .logo:hover{
@@ -70,10 +98,7 @@
 }
 
 .frase{
-    max-width: 60%;
     background-color: transparent;
-    margin-top: 70px;
-    margin-left: 50px;
     color: #7db8a2;
     font-family: 'Konkhmer Sleokchher', cursive;
 }
@@ -95,10 +120,25 @@
 }
 
 
-@media (max-width: 80%) {
+
+@media (max-width: 900px) {
     .frase {
-        max-width: 50%;
         background-color: transparent;
+        margin-top: 0px !important;
+        margin-left: 10px !important;
     }
+    .btn-comprar{
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+    .navbar{
+        background-color: #FFFFFF !important;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    
 
 }
